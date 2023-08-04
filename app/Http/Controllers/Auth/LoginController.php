@@ -23,7 +23,7 @@ class LoginController extends Controller
 
             $user = User::where('email',$email)->first();
             Auth::login($user);
-            return redirect('/home');
+            return redirect('/product');
         }else{
             return back()->withErrors(['Invaild data']);
         }
